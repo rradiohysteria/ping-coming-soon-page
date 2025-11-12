@@ -1,0 +1,85 @@
+@use 'globals' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    min-height: 100vh;
+    @include flex-center(column);
+}
+
+main {
+    width: 90%;
+
+    .image {
+        margin-top: 4.5rem;
+        margin-bottom: 7.5rem;
+        width: 100%;
+    }
+}
+
+.info {
+    @include flex-center(column);
+    gap: $spacing-500;
+
+    &__logo {
+        height: 1rem;
+    }
+
+    &__text {
+        text-align: center;
+        h1 {
+            @include text(300, 1.25rem);
+            color: $grey-400;
+            margin-bottom: $spacing-100;
+        }
+
+        span {
+            @include text(700, 1.25rem);
+            color: $blue-950;
+        }
+
+        p {
+            @include text(300, 0.75rem);
+            color: $blue-950;
+        }
+    }
+
+    &__email {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-100;
+        width: 80%;
+
+        input {
+            height: $spacing-500;
+            border-radius: 1.75rem;
+            border: 1px solid $blue-200;
+
+            &::placeholder {
+                @include text(300, 0.75rem);
+                color: $blue-200;
+                padding-left: $spacing-300;
+            }
+        }
+
+        button {
+            height: $spacing-500;
+            border-radius: 1.75rem;
+            background-color: $blue-500;
+            border: none;
+            color: $white;
+            @include text(600, 0.75rem);
+        }
+    }
+}
+
+.footer {
+    &__socials {
+        color: $blue-500;
+    }
+}
