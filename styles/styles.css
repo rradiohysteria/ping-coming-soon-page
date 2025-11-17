@@ -69,6 +69,7 @@ main .image {
   border: 1px solid #c2d3ff;
 }
 .info__email input::-moz-placeholder {
+  font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
   font-size: 0.75rem;
   line-height: 1.25;
@@ -77,6 +78,7 @@ main .image {
   padding-left: 1.5rem;
 }
 .info__email input::placeholder {
+  font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
   font-size: 0.75rem;
   line-height: 1.25;
@@ -98,4 +100,45 @@ main .image {
 
 .footer__socials {
   color: #4c7bf3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer__socials i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #c2d3ff;
+  width: 2rem;
+  height: 2rem;
+}
+.footer p {
+  color: #969696;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: 0rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .info__logo {
+    height: 1.5rem;
+  }
+  .info__text h1, .info__text span {
+    font-size: 3rem;
+  }
+  .info__text p {
+    font-size: 1.25rem;
+  }
+  .info__email {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

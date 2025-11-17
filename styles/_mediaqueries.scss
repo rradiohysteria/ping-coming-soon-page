@@ -1,0 +1,26 @@
+@use 'globals' as *;
+
+@media screen and (min-width: $breakpoint-tablet) {
+    .info {
+        &__logo{
+            height: $spacing-300;
+        }
+
+        &__text {
+            h1, span {
+                font-size: 3rem;
+            }
+            
+            p {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__email {
+            flex-direction: row;
+            justify-content: center;
+            gap: $spacing-200;
+            width: 100%;
+        }
+    }
+}

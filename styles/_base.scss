@@ -27,7 +27,7 @@ main {
     gap: $spacing-500;
 
     &__logo {
-        height: 1rem;
+        height: $spacing-200;
     }
 
     &__text {
@@ -61,6 +61,7 @@ main {
             border: 1px solid $blue-200;
 
             &::placeholder {
+                font-family: "Libre Franklin", sans-serif;
                 @include text(300, 0.75rem);
                 color: $blue-200;
                 padding-left: $spacing-300;
@@ -81,5 +82,21 @@ main {
 .footer {
     &__socials {
         color: $blue-500;
+        @include flex-center(row);
+        gap: $spacing-300;
+        margin-bottom: $spacing-300;
+        
+        i {
+            @include flex-center(row);
+            border-radius: 50%;
+            border: 1px solid $blue-200;
+            width: $spacing-400;
+            height: $spacing-400;
+        }
+    }
+
+    p {
+        color: $grey-400;
+        @include text(300, 0.75rem);
     }
 }
