@@ -55,26 +55,50 @@ main {
         gap: $spacing-100;
         width: 80%;
 
+        div {
+            width: 100%;
+        }
+
         input {
             height: $spacing-500;
             border-radius: 1.75rem;
             border: 1px solid $blue-200;
+            width: 100%;
+            padding-left: $spacing-300;
+            font-family: "Libre Franklin", sans-serif;
 
             &::placeholder {
-                font-family: "Libre Franklin", sans-serif;
                 @include text(300, 0.75rem);
                 color: $blue-200;
-                padding-left: $spacing-300;
+            }
+
+            &:focus {
+                border: 2px solid $blue-500;
+                outline: none;
             }
         }
 
+        p {
+            @include text(400, 0.625rem);
+            font-style: italic;
+            color: $red-400;
+            margin-top: $spacing-100;
+            padding-left: $spacing-200;
+        }
+
         button {
+            position: relative;
             height: $spacing-500;
             border-radius: 1.75rem;
             background-color: $blue-500;
             border: none;
             color: $white;
             @include text(600, 0.75rem);
+            box-shadow: 0 5px 10px 2px rgb(76, 123, 243, 0.25);
+
+            &:hover {
+                opacity: 0.75;
+            }
         }
     }
 }
@@ -99,4 +123,13 @@ main {
         color: $grey-400;
         @include text(300, 0.75rem);
     }
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    border: 2px solid $red-400 !important;
+    outline: none;
 }

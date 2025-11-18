@@ -22,9 +22,13 @@
         <h1>We are launching <span>soon!</span></h1>
         <p>Subscribe and get notified</p>
       </div>
-      <form class="info__email">
-        <input id="useremail" class="info__input" placeholder="Your email address..." aria-label="Email" required>
-        <button type="submit" class="info__btn">Notify Me</button>
+      <form id="email-form" class="info__email" novalidate>
+        <div>
+          <input id="useremail" class="info__input" placeholder="Your email address..." aria-label="Email" required>
+          <p id="error-empty" class="hidden">Whoops! It looks like you forgot to add your email</p>
+          <p id="error-msg" class="hidden">Please provide a valid email address</p>
+        </div>
+        <button id="email-submit" type="submit" class="info__btn">Notify Me</button>
       </form>
     </section>
     <img class='image' src="./images/illustration-dashboard.png" alt="Dashboard">
@@ -37,5 +41,6 @@
     </div>
     <p>&copy; Copyright Ping. All rights reserved.</p>
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>

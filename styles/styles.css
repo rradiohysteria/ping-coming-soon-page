@@ -63,30 +63,47 @@ main .image {
   gap: 0.5rem;
   width: 80%;
 }
+.info__email div {
+  width: 100%;
+}
 .info__email input {
   height: 2.5rem;
   border-radius: 1.75rem;
   border: 1px solid #c2d3ff;
+  width: 100%;
+  padding-left: 1.5rem;
+  font-family: "Libre Franklin", sans-serif;
 }
 .info__email input::-moz-placeholder {
-  font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
   font-size: 0.75rem;
   line-height: 1.25;
   letter-spacing: 0rem;
   color: #c2d3ff;
-  padding-left: 1.5rem;
 }
 .info__email input::placeholder {
-  font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
   font-size: 0.75rem;
   line-height: 1.25;
   letter-spacing: 0rem;
   color: #c2d3ff;
-  padding-left: 1.5rem;
+}
+.info__email input:focus {
+  border: 2px solid #4c7bf3;
+  outline: none;
+}
+.info__email p {
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 1.25;
+  letter-spacing: 0rem;
+  font-style: italic;
+  color: #ff5466;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
 }
 .info__email button {
+  position: relative;
   height: 2.5rem;
   border-radius: 1.75rem;
   background-color: #4c7bf3;
@@ -96,6 +113,10 @@ main .image {
   font-size: 0.75rem;
   line-height: 1.25;
   letter-spacing: 0rem;
+  box-shadow: 0 5px 10px 2px rgba(76, 123, 243, 0.25);
+}
+.info__email button:hover {
+  opacity: 0.75;
 }
 
 .footer__socials {
@@ -125,7 +146,29 @@ main .image {
   letter-spacing: 0rem;
 }
 
+.hidden {
+  display: none;
+}
+
+.error {
+  border: 2px solid #ff5466 !important;
+  outline: none;
+}
+
 @media screen and (min-width: 48rem) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .image {
+    width: 90%;
+    margin-bottom: 4.5rem;
+  }
+  .info {
+    margin-top: 5.5rem;
+  }
   .info__logo {
     height: 1.5rem;
   }
@@ -139,6 +182,28 @@ main .image {
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-    width: 100%;
+    width: 90%;
+  }
+  .info__email div {
+    width: 70%;
+  }
+  .info__email button {
+    width: 30%;
+  }
+  .footer {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  main {
+    width: 50%;
+  }
+  .info__email {
+    width: 110%;
+  }
+  .footer__socials i:hover {
+    background-color: #4c7bf3;
+    color: #fff;
+    border: none;
   }
 }/*# sourceMappingURL=styles.css.map */
